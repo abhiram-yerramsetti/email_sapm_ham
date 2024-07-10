@@ -5,13 +5,13 @@ import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 
 # Load the pre-trained model
-model = pickle.load(open(r"E:\innomatics\ml\NLP\email_spam_ham\model.pkl", 'rb'))
+model = pickle.load(open(model.pkl", 'rb'))
 
 # Load the CountVectorizer used for training
-with open(r"E:\innomatics\ml\NLP\email_spam_ham\bow.pkl", 'rb') as f:
+with open("bow.pkl", 'rb') as f:
     bow = pickle.load(f)
 
-st.image(r"E:\innomatics\logo.png",width=200)
+st.image("logo.png",width=200)
 st.title("Email Spam/Ham Classifier")
 
 # Input email text
@@ -29,6 +29,6 @@ if Email:
     if st.button('Submit'):
         st.write("The email is:", "Spam" if spam_ham == 'spam' else "Ham")
         if spam_ham == 'spam':
-            st.image(r"E:\innomatics\ml\NLP\email_spam_ham\OIP.jpeg",width=200)
+            st.image("OIP.jpeg",width=200)
         else :
-            st.image(r"E:\innomatics\ml\NLP\email_spam_ham\ham.jpeg",width=200)
+            st.image("ham.jpeg",width=200)
