@@ -5,7 +5,7 @@ import pickle
 from sklearn.feature_extraction.text import CountVectorizer
 
 # Load the pre-trained model
-model = pickle.load(open(model.pkl", 'rb'))
+model = pickle.load(open("model.pkl", 'rb'))
 
 # Load the CountVectorizer used for training
 with open("bow.pkl", 'rb') as f:
